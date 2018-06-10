@@ -1,0 +1,18 @@
+.navbar {
+  border-bottom: solid 8px $primary;
+  @include desktop {
+    min-height: 5rem;
+  }
+  &-brand {
+    span {
+      font-weight: 900;
+      margin-left: .5rem;
+      text-transform: uppercase;
+    }
+  }
+  &-item {
+    img {
+      max-height: 2.2rem;
+    }
+  }
+}

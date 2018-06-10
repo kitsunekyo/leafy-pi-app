@@ -1,0 +1,14 @@
+.card {
+  &-header {
+    &-title {
+      font-weight: 400;
+    }
+  }
+  &-image {
+    .image {
+      img {
+        height: auto;
+      }
+    }
+  }
+}

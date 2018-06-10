@@ -1,0 +1,62 @@
+.monitor {
+  height: 100%;
+  &-list {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  &-segment {
+    max-width: 150px;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+      max-width: none;
+    }
+    &__value {
+      fill: #666;
+      font-family: sans-serif;
+      font-size: 0.5em;
+      text-anchor: middle;
+    }
+    &__label {
+      text-align: center;
+    }
+    &__circle {
+      &-bg {
+        fill: none;
+        stroke: #eee;
+        stroke-width: 3.8;
+      }
+      &-fill {
+        fill: none;
+        stroke-width: 2.8;
+        stroke-linecap: round;
+        &.animate {
+          animation: progress 1s ease-out forwards;
+        }
+      }
+    }
+  }
+  .circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .monitor-segment__circle-fill {
+  stroke: #ff9f00;
+}
+
+.circular-chart.green .monitor-segment__circle-fill {
+  stroke: $primary;
+}
+
+.circular-chart.blue .monitor-segment__circle-fill {
+  stroke: #3c9ee5;
+}
