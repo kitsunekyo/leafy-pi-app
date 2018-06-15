@@ -3,7 +3,7 @@
     <Navbar />
     <div class="site-content">
       <div class="container">
-        <Dashboard />
+        <Dashboard v-if="user" />
       </div>
     </div>
   </div>
@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     user() {
-      return this.$store.auth.user;
+      return this.$store.state.auth.user;
     },
   },
   mounted() {

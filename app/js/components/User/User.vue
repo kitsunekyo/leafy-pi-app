@@ -20,3 +20,8 @@ export default {
   mounted() {},
 };
 </script>
+<style lang="scss">
+.user {
+  position: relative;
+}
+</style>

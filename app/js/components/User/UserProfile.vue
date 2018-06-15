@@ -19,3 +19,14 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.user-profile {
+  display: flex;
+  align-items: center;
+  i,
+  span {
+    margin-right: 0.5rem;
+  }
+}
+</style>
+

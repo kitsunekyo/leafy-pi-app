@@ -53,7 +53,6 @@ const store = new Vuex.Store({
             password: payload.password,
           })
           .then(response => {
-            console.log('success', response);
             // SET COOKIE
             const d = new Date();
             d.setTime(d.getTime() + (1 * 60 * 60 * 1000));
@@ -64,7 +63,6 @@ const store = new Vuex.Store({
             resolve(response);
           })
           .catch(err => {
-            console.log(err);
             reject(err);
           });
 

@@ -1,7 +1,10 @@
 <template>
   <div class="login">
+    <span>You're not logged in!</span>
     <div class="button" @click="handleLoginClick">Login</div>
-    <LoginForm v-if="showForm"></LoginForm>
+    <transition name="slide-fade">
+      <LoginForm v-if="showForm"></LoginForm>
+    </transition>
   </div>
 </template>
 <script>
@@ -22,4 +25,12 @@ export default {
   },
 };
 </script>
-
+<style lang="scss">
+.login {
+  display: flex;
+  align-items: center;
+  span {
+    margin-right: 0.5rem;
+  }
+}
+</style>
