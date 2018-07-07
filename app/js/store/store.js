@@ -48,7 +48,7 @@ const store = new Vuex.Store({
     }, payload) {
       return new Promise((resolve, reject) => {
         axios
-          .post(`${CONFIG.api.host}/auth/login`, {
+          .post(`//${window.location.hostname}:${CONFIG.api.port}/auth/login`, {
             email: payload.email,
             password: payload.password,
           })

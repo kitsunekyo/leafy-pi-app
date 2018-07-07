@@ -46,17 +46,14 @@ export default {
       }
     },
     sendWater() {
-      console.log(`${CONFIG.api.host}/api/pump/water`, {
-        headers: {
-          Authorization: `Bearer ${this.auth.token}`,
-        },
-      });
       this.isWatering = true;
-      axios.post(`${CONFIG.api.host}/api/pump/water`).then(res => {
-        this.runProgress().then(() => {
-          this.isWatering = false;
+      axios
+        .post(`//${window.location.hostname}:${CONFIG.api.port}/api/pump/water`)
+        .then(res => {
+          this.runProgress().then(() => {
+            this.isWatering = false;
+          });
         });
-      });
     },
     runProgress() {
       return new Promise((resolve, reject) => {

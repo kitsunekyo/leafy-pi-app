@@ -1,6 +1,7 @@
 module.exports = {
   api: {
-    host: '//localhost:4000',
+    host: `//localhost:4000`,
+    port: 4000,
   },
   webpack: {
     mode: 'development',
