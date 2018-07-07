@@ -1,8 +1,7 @@
 <template>
   <div class="dashboard">
-    <h1 class="title">Hello :)</h1>
     <div class="columns">
-      <div class="column">
+      <div class="column is-one-third">
         <Pump />
       </div>
     </div>
